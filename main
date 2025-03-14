@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<HinhHoc> danhSachHinh = new ArrayList<>();
+
+        System.out.println("\n===== NHẬP THÔNG TIN CHO TẤT CẢ CÁC HÌNH =====");
+
+        
+        HinhTron hinhTron = new HinhTron();
+        hinhTron.nhapThongTin();
+        hinhTron.tinhChuVi();
+        hinhTron.tinhDienTich();
+        danhSachHinh.add(hinhTron);
+
+      
+        HinhTru hinhTru = new HinhTru();
+        hinhTru.nhapThongTin();
+        hinhTru.tinhChuVi();
+        hinhTru.tinhDienTich();
+        hinhTru.tinhTheTich();
+        danhSachHinh.add(hinhTru);
+
+        HinhChuNhat hinhChuNhat = new HinhChuNhat();
+        hinhChuNhat.nhapThongTin();
+        hinhChuNhat.tinhChuVi();
+        hinhChuNhat.tinhDienTich();
+        danhSachHinh.add(hinhChuNhat);
+
+  
+        HinhVuong hinhVuong = new HinhVuong();
+        hinhVuong.nhapThongTin();
+        hinhVuong.tinhChuVi();
+        hinhVuong.tinhDienTich();
+        danhSachHinh.add(hinhVuong);
+
+     
+        System.out.println("\n===== KẾT QUẢ CÁC HÌNH =====");
+        for (HinhHoc hinh : danhSachHinh) {
+            hinh.hienThi();
+            System.out.println("-----------------------------");
+        }
+
+        scanner.close();
+    }
+}
