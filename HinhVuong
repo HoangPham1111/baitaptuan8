@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class HinhVuong extends HinhChuNhat {
+    public HinhVuong() {
+        ten = "Hình Vuông";
+    }
+    @Override
+    public void nhapThongTin() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập cạnh: ");
+        dai = rong = scanner.nextFloat();
+    }
+    @Override
+    public void hienThi() {
+        tinhChuVi();   
+        tinhDienTich(); 
+        xuatTen();
+        System.out.println("Cạnh: " + dai);
+        System.out.println("Chu vi: " + chuVi);
+        System.out.println("Diện tích: " + dienTich);
+    }
+}
