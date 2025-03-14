@@ -1,0 +1,17 @@
+import java.util.Scanner;
+abstract class HinhHoc {
+    protected String ten;
+    protected float chuVi;
+    protected float dienTich;
+    protected float theTich;
+    protected final float PI = 3.14f;
+    public abstract void tinhChuVi();
+    public abstract void tinhDienTich();
+    public abstract void tinhTheTich();
+    public abstract void nhapThongTin();
+
+    public void xuatTen() {
+        System.out.println("Hình: " + ten);
+    }
+    public abstract void hienThi();
+}
